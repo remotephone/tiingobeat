@@ -54,7 +54,7 @@ def check_time():
 
 def main():
     while True:
-        # check_time()
+        check_time()
         response = get_stocks()
         try:
             put_stocks(response)

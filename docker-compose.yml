@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  tiingobeat:
+    image: ghcr.io/remotephone/tiingobeat:latest
+    environment:
+      STOCKS: "aapl"
+      LOGSTASH_HOST: "logstash.host.local"
+      TOKEN: "token"
+    deploy:
+        restart_policy:
+            condition: any
+            max_attempts: 10
+            delay: 60
